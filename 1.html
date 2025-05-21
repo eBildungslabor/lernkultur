@@ -6,16 +6,21 @@
     <title>Praxisworkshop Lernkulturveränderung</title>
 
     <link rel="stylesheet" href="https://cdn.simplecss.org/simple.css">
-    <style>
-      .attention {
-        animation: blink 1s infinite;
-      }
+   <style>
+  .timer-button {
+    font-size: 1.5rem;
+    padding: 1rem 2rem;
+  }
 
-      @keyframes blink {
-        0%, 100% { background-color: #e74c3c; }
-        50% { background-color: #f1c40f; }
-      }
-    </style>
+  .attention {
+    animation: red-blink 1s infinite;
+  }
+
+  @keyframes red-blink {
+    0%, 100% { background-color: #e74c3c; }
+    50% { background-color: #ff9999; }
+  }
+</style>
 
     <script src="common.js" defer></script>
     <script src="timer.js" defer></script>
@@ -50,7 +55,7 @@
 
       <p>Alles klar? Dann startet jetzt den Timer und baut Eure Kopfstand-Statue!</p>
 
-      <button data-timer="5">Timer starten!</button>
+      <button data-timer="1">Timer starten!</button>
 
       <p>Wenn die Zeit abgelaufen ist, geht es weiter zum nächsten Schritt!</p>
 
