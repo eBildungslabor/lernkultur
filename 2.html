@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Überraschungsei-Herausforderung</title>
+
+    <link rel="stylesheet" href="https://cdn.simplecss.org/simple.css">
+    <style>
+      .timer-button {
+        font-size: 1.5rem;
+        padding: 1rem 2rem;
+      }
+
+      .attention {
+        animation: red-blink 1s infinite;
+      }
+
+      @keyframes red-blink {
+        0%, 100% { background-color: #e74c3c; }
+        50% { background-color: #ff9999; }
+      }
+
+      .hidden-prompt {
+        display: none;
+      }
+    </style>
+
+    <script src="timer.js" defer></script>
+    <script>
+      // Prompt-Kopierfunktion
+      function copyPrompt() {
+        const prompt = document.getElementById('prompt-text').textContent;
+        navigator.clipboard.writeText(prompt)
+          .then(() => alert('Prompt wurde kopiert!'))
+          .catch(() => alert('Kopieren fehlgeschlagen.'));
+      }
+    </script>
+  </head>
+  <body>
+
+    <header>
+      <h1>Praxisworkshop Lernkulturveränderung</h1>
+      <p>Wie gestalten wir gutes Lernen im Kontext von KI?</p>
+      <nav>
+        <ul>
+          <li><a href="index.html">👋 Start</a></li>
+          <li><a href="1.html">Kopfstand-Statue</a></li>
+          <li><a href="2.html">Überraschungsei-Herausforderung</a></li>
+          <li><a href="3.html">Post-It Notizen</a></li>
+          <li><a href="4.html">Würfel-Listen</a></li>
+          <li><a href="5.html">Sparring-Partner-Ideen</a></li>
+          <li><a href="6.html">Kollaborative Verbesserung</a></li>
+          <li><a href="7.html">Zurück ins Plenum</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <h2>Überraschungsei-Herausforderung</h2>
+
+      <p>Verteilt an jede Person ein Überraschungsei und stärkt Euch gerne schon mit der Schokolade.</p>
+
+      <p>Dann schaut Euch das Video an:</p>
+      <video controls width="100%">
+        <source src="video.mp4" type="video/mp4">
+        Dein Browser unterstützt das Video-Tag nicht.
+      </video>
+
+      <p>Kopiert Euch hier den erwähnten Prompt für ein KI-Sprachmodell Eurer Wahl:</p>
+
+      <button onclick="copyPrompt()">Prompt kopieren</button>
+      <div id="prompt-text" class="hidden-prompt">Muster-Promot - bitte einfügen</div>
+
+      <p>Startet dann den Timer und gebt den kopierten Code in ein Sprachmodell ein. Folgt dann den Anweisungen.</p>
+
+      <button data-timer="10" class="timer-button">Timer starten!</button>
+
+      <p>Wenn die Zeit abgelaufen ist, geht es weiter zum nächsten Schritt:</p>
+      <a class="button" href="3.html">Nächster Schritt</a>
+    </main>
+
+    <footer>
+      <p>Erstellt von Nele Hirsch <a href="https://ebildungslabor.de">(eBildungslabor)</a> | Lizenz: <a href="https://creativecommons.org/publicdomain/zero/1.0/deed.de">CC0 1.0</a></p>
+    </footer>
+
+  </body>
+</html>
